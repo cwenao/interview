@@ -1,0 +1,8 @@
+rootProject.name = 'interview'
+include 'design-pattern'
+include 'java-core'
+include 'spring-core'
+include 'multi-thread'
+include 'jvm-core'
+include 'daas'
+
