@@ -28,9 +28,14 @@ public class TestThreadSafe extends Thread {
         MyThreadSafeData myThreadSafeData = new MyThreadSafeData();
         TestThreadSafe t1 = new TestThreadSafe(myThreadSafeData);
         TestThreadSafe t2 = new TestThreadSafe(myThreadSafeData);
-
         t1.start();
         t2.start();
+
+        TestThreadSafe2 t3 = new TestThreadSafe2(myThreadSafeData);
+        TestThreadSafe2 t4 = new TestThreadSafe2(myThreadSafeData);
+
+        t3.start();
+        t4.start();
 
     }
 
