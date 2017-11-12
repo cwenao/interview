@@ -53,4 +53,13 @@ public class MyThreadSafeData {
         }
     }
 
+    public void testBlockSafe(String testStr) {
+        System.out.println("this is start to test : thread name: " + Thread.currentThread().getName());
+
+        synchronized (this) {
+            System.out.println("testing =========>  : thread name =======> ::::  " + Thread.currentThread().getName());
+        }
+
+    }
+
 }
