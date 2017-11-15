@@ -25,17 +25,30 @@ public class TestThreadSafe extends Thread {
     }
 
     public static void main(String[] args) {
-        MyThreadSafeData myThreadSafeData = new MyThreadSafeData();
-        TestThreadSafe t1 = new TestThreadSafe(myThreadSafeData);
-        TestThreadSafe t2 = new TestThreadSafe(myThreadSafeData);
-        t1.start();
-        t2.start();
+        //MyThreadSafeData myThreadSafeData = new MyThreadSafeData();
+//        TestThreadSafe t1 = new TestThreadSafe(myThreadSafeData);
+//        TestThreadSafe t2 = new TestThreadSafe(myThreadSafeData);
+//        t1.start();
+//        t2.start();
+//
+//        TestThreadSafe2 t3 = new TestThreadSafe2(myThreadSafeData);
+//        TestThreadSafe2 t4 = new TestThreadSafe2(myThreadSafeData);
+//
+//        t3.start();
+//        t4.start();
 
-        TestThreadSafe2 t3 = new TestThreadSafe2(myThreadSafeData);
-        TestThreadSafe2 t4 = new TestThreadSafe2(myThreadSafeData);
+        TestThreadSafeSynchronized testThreadSafeSynchronized = new TestThreadSafeSynchronized();
+        TestThreadSafe3 testThreadSafe3 = new TestThreadSafe3(testThreadSafeSynchronized);
+        TestThreadSafe3 testThreadSafe31 = new TestThreadSafe3(testThreadSafeSynchronized);
 
-        t3.start();
-        t4.start();
+        testThreadSafe3.start();
+        testThreadSafe31.start();
+
+        TestThreadSafe4 testThreadSafe4 = new TestThreadSafe4(testThreadSafeSynchronized);
+        TestThreadSafe4 testThreadSafe41 = new TestThreadSafe4(testThreadSafeSynchronized);
+
+        testThreadSafe4.start();
+        testThreadSafe41.start();
 
     }
 
