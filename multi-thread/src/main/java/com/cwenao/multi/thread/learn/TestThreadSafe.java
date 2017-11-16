@@ -37,18 +37,26 @@ public class TestThreadSafe extends Thread {
 //        t3.start();
 //        t4.start();
 
-        TestThreadSafeSynchronized testThreadSafeSynchronized = new TestThreadSafeSynchronized();
-        TestThreadSafe3 testThreadSafe3 = new TestThreadSafe3(testThreadSafeSynchronized);
-        TestThreadSafe3 testThreadSafe31 = new TestThreadSafe3(testThreadSafeSynchronized);
+//        TestThreadSafeSynchronized testThreadSafeSynchronized = new TestThreadSafeSynchronized();
+//        TestThreadSafe3 testThreadSafe3 = new TestThreadSafe3(testThreadSafeSynchronized);
+//        TestThreadSafe3 testThreadSafe31 = new TestThreadSafe3(testThreadSafeSynchronized);
+//
+//        testThreadSafe3.start();
+//        testThreadSafe31.start();
+//
+//        TestThreadSafe4 testThreadSafe4 = new TestThreadSafe4(testThreadSafeSynchronized);
+//        TestThreadSafe4 testThreadSafe41 = new TestThreadSafe4(testThreadSafeSynchronized);
+//
+//        testThreadSafe4.start();
+//        testThreadSafe41.start();
 
-        testThreadSafe3.start();
-        testThreadSafe31.start();
+        TestDeadLock testDeadLock = new TestDeadLock();
 
-        TestThreadSafe4 testThreadSafe4 = new TestThreadSafe4(testThreadSafeSynchronized);
-        TestThreadSafe4 testThreadSafe41 = new TestThreadSafe4(testThreadSafeSynchronized);
+        TestThreadSafeDeadLock1 testThreadSafeDeadLock1 = new TestThreadSafeDeadLock1(testDeadLock);
+        TestThreadSafeDeadLock1 testThreadSafeDeadLock11 = new TestThreadSafeDeadLock1(testDeadLock);
 
-        testThreadSafe4.start();
-        testThreadSafe41.start();
+        testThreadSafeDeadLock1.start();
+        testThreadSafeDeadLock11.start();
 
     }
 
