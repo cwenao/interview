@@ -18,7 +18,7 @@ public class TestThreadSafeDeadLock2 extends Thread {
 
     @Override
     public void run() {
-        testDeadLock.testDeading();
+        testDeadLock.testDeadLockBlock2();
     }
 
 }

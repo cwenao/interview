@@ -50,13 +50,20 @@ public class TestThreadSafe extends Thread {
 //        testThreadSafe4.start();
 //        testThreadSafe41.start();
 
-        TestDeadLock testDeadLock = new TestDeadLock();
+//        TestDeadLock testDeadLock = new TestDeadLock();
+//
+//        TestThreadSafeDeadLock1 testThreadSafeDeadLock1 = new TestThreadSafeDeadLock1(testDeadLock);
+//        TestThreadSafeDeadLock1 testThreadSafeDeadLock11 = new TestThreadSafeDeadLock1(testDeadLock);
+//
+//        testThreadSafeDeadLock1.start();
+//        testThreadSafeDeadLock11.start();
 
+        TestDeadLock testDeadLock = new TestDeadLock();
+        TestThreadSafeDeadLock2 testThreadSafeDeadLock2 = new TestThreadSafeDeadLock2(testDeadLock);
         TestThreadSafeDeadLock1 testThreadSafeDeadLock1 = new TestThreadSafeDeadLock1(testDeadLock);
-        TestThreadSafeDeadLock1 testThreadSafeDeadLock11 = new TestThreadSafeDeadLock1(testDeadLock);
 
         testThreadSafeDeadLock1.start();
-        testThreadSafeDeadLock11.start();
+        testThreadSafeDeadLock2.start();
 
     }
 

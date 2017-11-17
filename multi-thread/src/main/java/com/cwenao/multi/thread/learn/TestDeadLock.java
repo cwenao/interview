@@ -9,6 +9,10 @@ package com.cwenao.multi.thread.learn;
  * @version $Id TestDeadLock.java, v 0.1 2017-11-16 10:33 cwenao Exp $$
  */
 public class TestDeadLock {
+
+    Object object = new Object();
+    Object object1 = new Object();
+
     public synchronized void testDeading() {
         boolean test = true;
         while (test) {
@@ -22,4 +26,33 @@ public class TestDeadLock {
         System.out.println("this is the sync to test dead lock");
 
     }
+
+    public void testDeadLockBlock() {
+        synchronized (object) {
+            int x = 0;
+            while (x < 10) {
+                try {
+                    System.out.println("to test the sync block  ======> " + x++);
+                    Thread.sleep(100);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    public void testDeadLockBlock2() {
+        synchronized (object1) {
+            int x = 0;
+            while (x < 10) {
+                try {
+                    System.out.println("to test the sync block2 =======> " + x++);
+                    Thread.sleep(100);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
 }
