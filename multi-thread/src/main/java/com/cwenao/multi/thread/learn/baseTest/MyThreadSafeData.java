@@ -2,7 +2,7 @@
  * Company
  * Copyright (C) 2014-2017 All Rights Reserved.
  */
-package com.cwenao.multi.thread.learn;
+package com.cwenao.multi.thread.learn.baseTest;
 
 /**
  * @author cwenao
