@@ -34,11 +34,18 @@ public class LambdasSort {
         stringStream.forEach(x -> System.out.println(x));
     }
 
+    public static void methodReferences(String[] arrays) {
+        Stream<String> stringStream = Stream.of(arrays);
+        stringStream.sorted((m,n) -> Integer.compare(m.length(),n.length())).forEach(System.out::println);
+    }
+
+
     public static void main(String[] args) {
         String[] arr = {"program", "creek", "is", "a", "java", "site"};
 //        arraySortWithString(arr);
 //        arraySortWithMultiple(arr);
-        iteratorArrays(arr);
+//        iteratorArrays(arr);
+        methodReferences(arr);
     }
 
 
