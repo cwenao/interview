@@ -39,13 +39,20 @@ public class LambdasSort {
         stringStream.sorted((m,n) -> Integer.compare(m.length(),n.length())).forEach(System.out::println);
     }
 
+    public static void noParameter(String[] arrays) {
+        Arrays.stream(arrays).forEach((x)->{
+            System.out.println(x);
+        });
+    }
+
 
     public static void main(String[] args) {
         String[] arr = {"program", "creek", "is", "a", "java", "site"};
 //        arraySortWithString(arr);
 //        arraySortWithMultiple(arr);
 //        iteratorArrays(arr);
-        methodReferences(arr);
+//        methodReferences(arr);
+        noParameter(arr);
     }
 
 
