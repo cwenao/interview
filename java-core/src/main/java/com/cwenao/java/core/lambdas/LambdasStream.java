@@ -4,6 +4,9 @@
  */
 package com.cwenao.java.core.lambdas;
 
+import com.cwenao.java.core.pojo.Item;
+import com.cwenao.java.core.pojo.Order;
+
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -45,6 +48,19 @@ public class LambdasStream {
         System.out.println(Arrays.toString(arrays));
     }
 
+    public static void lambdasMap(List<String> stringList) {
+        Stream<Integer> stream = stringList.stream().map(s -> s.length());
+        Integer[] len = stream.toArray(Integer[]::new);
+        System.out.println(Arrays.toString(len));
+
+    }
+
+    public static void lambdasFlatMap(List<Order> lists) {
+        Stream<Item> itemStream = lists.stream().flatMap(order -> order.getItemList().stream());
+        Item[] items = itemStream.toArray(Item[]::new);
+        System.out.println(Arrays.toString(items));
+    }
+
     public static void main(String[] args) {
         List<String> list = new ArrayList<>();
         list.add("a");
@@ -55,6 +71,27 @@ public class LambdasStream {
         list.add("cwenao");
         list.add("RED");
 
+        //flatMap
+        Item item1 = new Item();
+        item1.setItem("nini");
+        item1.setItemNmae("ilove");
+
+        Item item2 = new Item();
+        item2.setItem("cwenao");
+        item2.setItemNmae("yourlove");
+
+        List<Item> itemList = new ArrayList<>();
+        itemList.add(item1);
+        itemList.add(item2);
+
+        Order order = new Order();
+        order.setId("mm");
+        order.setItemList(itemList);
+
+        List<Order> orderList = new ArrayList<>();
+        orderList.add(order);
+
+
 //        listStream(list);
 
 //        listStreamToArrays(list);
@@ -64,7 +101,9 @@ public class LambdasStream {
 
         String source = "hello world!123";
         String pattern = "\\W";
-        createStreamUsedPopularAPIs(source,pattern);
+        createStreamUsedPopularAPIs(source, pattern);
+        lambdasMap(list);
+        lambdasFlatMap(orderList);
     }
 
 }
