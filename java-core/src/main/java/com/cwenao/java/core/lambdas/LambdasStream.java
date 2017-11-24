@@ -7,7 +7,12 @@ package com.cwenao.java.core.lambdas;
 import com.cwenao.java.core.pojo.Item;
 import com.cwenao.java.core.pojo.Order;
 
+import java.io.IOException;
 import java.math.BigInteger;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -61,6 +66,30 @@ public class LambdasStream {
         System.out.println(Arrays.toString(items));
     }
 
+
+    public static void lambdasFlatMap2() {
+        Path path = null;
+
+        try {
+             path = Paths.get("/Users/cwenao/myblog");
+             //@SuppressWarnings("FilesLinesLeak") to solve the warnings
+            @SuppressWarnings("FilesLinesLeak") Stream<String> lines =Files.lines(path, StandardCharsets.UTF_8);
+            /**
+             * or use the try{}catch(){}
+             * try (Stream<String> lines = Files.lines(path, StandardCharsets.UTF_8)){
+             *     Stream<String> works = lines.flatMap(line -> Stream.of(line.split("\\W+")));
+             *     String[] worksArray = works.toArray(String[]::new);
+             *     System.out.println(Arrays.toString(worksArray));
+             * }
+             **/
+            Stream<String> works = lines.flatMap(line -> Stream.of(line.split("\\W+")));
+            String[] worksArray = works.toArray(String[]::new);
+            System.out.println(Arrays.toString(worksArray));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void main(String[] args) {
         List<String> list = new ArrayList<>();
         list.add("a");
@@ -104,6 +133,7 @@ public class LambdasStream {
         createStreamUsedPopularAPIs(source, pattern);
         lambdasMap(list);
         lambdasFlatMap(orderList);
+        lambdasFlatMap2();
     }
 
 }
