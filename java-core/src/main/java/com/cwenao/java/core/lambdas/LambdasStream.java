@@ -18,6 +18,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
@@ -96,6 +97,24 @@ public class LambdasStream {
         optional.ifPresent(System.out::println);
     }
 
+    public static void simpleCollectors() {
+        Stream<String> stringStream = Stream.of("a", "b", "c");
+        List<String> stringList = stringStream.collect(Collectors.toList());
+        System.out.println(Arrays.toString(stringList.toArray()));
+    }
+
+    public static void optional() {
+
+        List<Integer> integerList = new ArrayList<>();
+        integerList.add(1);
+        integerList.add(2);
+        integerList.add(4);
+        integerList.add(10);
+
+        int sum = integerList.stream().reduce(0, (x, y) -> x + y);
+        System.out.println("this is the optional: " + sum);
+    }
+
     public static void main(String[] args) {
         List<String> list = new ArrayList<>();
         list.add("a");
@@ -126,7 +145,6 @@ public class LambdasStream {
         List<Order> orderList = new ArrayList<>();
         orderList.add(order);
 
-
 //        listStream(list);
 
 //        listStreamToArrays(list);
@@ -141,6 +159,7 @@ public class LambdasStream {
         lambdasFlatMap(orderList);
         //lambdasFlatMap2();
         simpleReduce(list);
+        simpleCollectors();
+        optional();
     }
-
 }
