@@ -16,6 +16,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.regex.Pattern;
 import java.util.stream.Stream;
 
@@ -90,6 +91,11 @@ public class LambdasStream {
         }
     }
 
+    public static void simpleReduce(List<String> strings) {
+        Optional<String> optional = strings.stream().reduce((x, y) -> x + " test: " + y);
+        optional.ifPresent(System.out::println);
+    }
+
     public static void main(String[] args) {
         List<String> list = new ArrayList<>();
         list.add("a");
@@ -133,7 +139,8 @@ public class LambdasStream {
         createStreamUsedPopularAPIs(source, pattern);
         lambdasMap(list);
         lambdasFlatMap(orderList);
-        lambdasFlatMap2();
+        //lambdasFlatMap2();
+        simpleReduce(list);
     }
 
 }
