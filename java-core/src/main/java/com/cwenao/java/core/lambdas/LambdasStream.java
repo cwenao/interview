@@ -13,10 +13,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -68,7 +65,6 @@ public class LambdasStream {
         System.out.println(Arrays.toString(items));
     }
 
-
     public static void lambdasFlatMap2() {
         Path path = null;
 
@@ -111,8 +107,15 @@ public class LambdasStream {
         integerList.add(4);
         integerList.add(10);
 
-        int sum = integerList.stream().reduce(0, (x, y) -> x + y);
+        int sum = integerList.stream().reduce( (x, y) -> x + y).orElse(0);
         System.out.println("this is the optional: " + sum);
+    }
+
+    public static void counter() {
+        String[] arrays = {"a", "b", "a", "b", "c", "nini", "cwenao", "b"};
+        Stream<String> stringStream = Stream.of(arrays).parallel();
+        Map<String, Long> counter = stringStream.collect(Collectors.groupingBy(String::toString, Collectors.counting()));
+        System.out.println(counter.get("b"));
     }
 
     public static void main(String[] args) {
@@ -161,5 +164,8 @@ public class LambdasStream {
         simpleReduce(list);
         simpleCollectors();
         optional();
+
+        counter();
+
     }
 }
