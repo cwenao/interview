@@ -118,6 +118,22 @@ public class LambdasStream {
         System.out.println(counter.get("b"));
     }
 
+    /**
+     * this is the parallel execution
+     */
+    public static void parallelStream() {
+        List<String> stringList = Arrays.asList("I", "LOVE", "YOU", "NINI", "\\n", "-- cwenao");
+        stringList.parallelStream().forEach(x -> System.out.println(x + " "));
+    }
+
+    public static void concatStream() {
+        Stream<String> stringStream1 = Stream.of("a", "b", "c", "d");
+        Stream<String> stringStream2 = Stream.of("nini", "cwenao");
+
+        stringStream2 = Stream.concat(stringStream1, stringStream2);
+        System.out.println(Arrays.toString(stringStream2.toArray(String[]::new)));
+    }
+
     public static void main(String[] args) {
         List<String> list = new ArrayList<>();
         list.add("a");
@@ -166,6 +182,8 @@ public class LambdasStream {
         optional();
 
         counter();
+        parallelStream();
+        concatStream();
 
     }
 }
