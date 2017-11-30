@@ -2,7 +2,7 @@
  * Company
  * Copyright (C) 2014-2017 All Rights Reserved.
  */
-package com.cwenao.design.pattern;
+package com.cwenao.design.pattern.simplefactory;
 
 /**
  * @author cwenao

@@ -2,9 +2,9 @@
  * Company
  * Copyright (C) 2014-2017 All Rights Reserved.
  */
-package com.cwenao.design.pattern;
+package com.cwenao.design.pattern.simplefactory;
 
-import static com.cwenao.design.pattern.SimpleFactory.getProduct;
+import static com.cwenao.design.pattern.simplefactory.SimpleFactory.getProduct;
 
 /**
  * @author cwenao
@@ -17,5 +17,9 @@ public class Test {
         getProduct("cwenao");
         System.out.println("---------------------------------");
         getProduct("nini");
+
+        Chart chart = SimpleFactory.getChart("nini");
+        chart.display();
+
     }
 }

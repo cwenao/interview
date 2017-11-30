@@ -2,7 +2,7 @@
  * Company
  * Copyright (C) 2014-2017 All Rights Reserved.
  */
-package com.cwenao.design.pattern;
+package com.cwenao.design.pattern.simplefactory;
 
 /**
  * @author cwenao
@@ -21,4 +21,18 @@ public class SimpleFactory {
             product.methodDiff();
         }
     }
+
+    public static Chart getChart(String type) {
+        if (!Product.checkType(type)) {
+            System.out.println("this is not in product list");
+            return null;
+        }
+        Chart chart = null;
+        if (Chart.TYPE_NINI.equals(type)) {
+            chart = new HistogramChart();
+            return chart;
+        }
+        return null;
+    }
+
 }
