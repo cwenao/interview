@@ -9,4 +9,23 @@ package com.cwenao.design.pattern;
  * @version $Id SimpleFactory.java, v 0.1 2017-10-21 16:02 cwenao Exp $$
  */
 public class SimpleFactory {
+    public static void getProduct(String type) {
+
+        if (!Product.checkType(type)) {
+            System.out.println("this is not in product list");
+            return;
+        }
+        Product product = null;
+        if (Product.TYPE_NINI.equals(type)) {
+            product = new HistogramProduct();
+            product.methodDiff();
+        }
+    }
+
+    public static void main(String[] args) {
+        getProduct("cwenao");
+        System.out.println("---------------------------------");
+        getProduct("nini");
+    }
+
 }
