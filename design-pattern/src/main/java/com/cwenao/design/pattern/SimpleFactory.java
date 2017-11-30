@@ -21,11 +21,4 @@ public class SimpleFactory {
             product.methodDiff();
         }
     }
-
-    public static void main(String[] args) {
-        getProduct("cwenao");
-        System.out.println("---------------------------------");
-        getProduct("nini");
-    }
-
 }
