@@ -18,5 +18,9 @@
   - 如果对客户端隐藏则将LoggerFactory改为 abstract
   - ![日志记录结构图](http://bimg.kakme.com/markdown-img-paste-2017120606560116.png)
 
+
+### IoDH
+- Initialization Demand Holder (IoDH)
+
 [1]: http://blog.csdn.net/lovelion/article/details/9300657 "simple factory"
 [2]: http://blog.csdn.net/lovelion/article/details/9306745 "factory pattern"
