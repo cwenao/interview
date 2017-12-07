@@ -2,7 +2,7 @@
  * Company
  * Copyright (C) 2014-2017 All Rights Reserved.
  */
-package com.cwenao.design.pattern.prototype;
+package com.cwenao.design.pattern.createpattern.prototype;
 
 import java.io.*;
 

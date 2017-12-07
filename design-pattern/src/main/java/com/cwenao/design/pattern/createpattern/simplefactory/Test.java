@@ -2,9 +2,9 @@
  * Company
  * Copyright (C) 2014-2017 All Rights Reserved.
  */
-package com.cwenao.design.pattern.simplefactory;
+package com.cwenao.design.pattern.createpattern.simplefactory;
 
-import static com.cwenao.design.pattern.simplefactory.SimpleFactory.getProduct;
+import static com.cwenao.design.pattern.createpattern.simplefactory.SimpleFactory.getProduct;
 
 /**
  * @author cwenao
