@@ -11,7 +11,9 @@ package com.cwenao.design.pattern.structuredpattern.facadepattern;
 public class FacadeSimpleImpl implements FacadeSimple{
     @Override
     public void fileReader() {
-
+        FileReader fileReader = new FileReader();
+        fileReader.setName("aaaaaaa");
+        System.out.println(fileReader.getName());
     }
 
     @Override
