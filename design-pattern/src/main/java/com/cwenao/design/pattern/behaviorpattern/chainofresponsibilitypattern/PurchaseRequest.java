@@ -2,7 +2,7 @@
  * Company
  * Copyright (C) 2014-2017 All Rights Reserved.
  */
-package com.cwenao.design.pattern.structuredpattern.chainofresponsibilitypattern;
+package com.cwenao.design.pattern.behaviorpattern.chainofresponsibilitypattern;
 
 import java.math.BigDecimal;
 
