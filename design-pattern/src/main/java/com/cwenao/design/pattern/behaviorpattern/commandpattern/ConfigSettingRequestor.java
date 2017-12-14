@@ -31,9 +31,7 @@ public class ConfigSettingRequestor {
         for (CommandPattern command : commandPatterns) {
             command.execute();
         }
-
     }
-
 
     public CommandPattern getCommandPattern() {
         return commandPattern;
