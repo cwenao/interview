@@ -10,21 +10,28 @@ package com.cwenao.design.pattern.behaviorpattern.mementopattern;
  */
 public class Test {
     public static void main(String[] args) {
+        int index = -1;
         MementoCaretaker mementoCaretaker = new MementoCaretaker();
         Chessman chessman = new Chessman("炮", 3, 3);
         display(chessman);
+        index++;
         mementoCaretaker.setChessmanMemento(chessman.save());
 
         chessman.setX(4);
         chessman.setY(5);
         mementoCaretaker.setChessmanMemento(chessman.save());
+        index++;
         display(chessman);
 
         chessman.setX(5);
         chessman.setY(7);
         display(chessman);
 
-        chessman.restore(mementoCaretaker.getChessmanMemento());
+        chessman.restore(mementoCaretaker.getChessmanMemento(index));
+        index--;
+        display(chessman);
+
+        chessman.restore(mementoCaretaker.getChessmanMemento(index));
         display(chessman);
 
     }
