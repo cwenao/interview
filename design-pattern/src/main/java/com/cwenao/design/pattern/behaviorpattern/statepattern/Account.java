@@ -13,13 +13,19 @@ import java.math.BigDecimal;
 public class Account {
     private AccountState accountState;
     private String userId;
-    private BigDecimal balance = new BigDecimal(0).setScale(8);
+    private BigDecimal balance = new BigDecimal(0).setScale(2,7);
 
     public Account(String userId, BigDecimal balance) {
         this.userId = userId;
         this.balance = balance;
 
         accountState = new NormalAccountState(this);
+    }
+
+    public void deposit(BigDecimal balance) {
+        System.out.println(this.userId + " Deposit " + balance);
+        accountState.deposit(balance);
+        System.out.println(" after deposit balance: " + this.balance);
     }
 
     public AccountState getAccountState() {

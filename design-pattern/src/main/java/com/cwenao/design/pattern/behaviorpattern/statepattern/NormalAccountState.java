@@ -21,12 +21,13 @@ public class NormalAccountState extends AccountState{
     }
 
     @Override
-    public void deposit(BigDecimal account) {
-
+    public void deposit(BigDecimal balance) {
+        account.setBalance(account.getBalance().add(balance));
+        stateCheck();
     }
 
     @Override
-    public void withdraw(BigDecimal account) {
+    public void withdraw(BigDecimal balance) {
 
     }
 
@@ -37,6 +38,6 @@ public class NormalAccountState extends AccountState{
 
     @Override
     public void stateCheck() {
-
+        System.out.println("to check the account state");
     }
 }
