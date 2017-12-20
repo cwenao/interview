@@ -1,14 +1,20 @@
-group 'com.cwenao'
-version '1.0-SNAPSHOT'
+apply plugin: 'org.springframework.boot'
 
-apply plugin: 'java'
 
-sourceCompatibility = 1.8
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.boot:spring-boot-starter:"+ springBootVersion
+    }
+}
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
+    compile ('com.alibaba:fastjson:'+fastjsonVersion)
     testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+jar {
+    baseName = 'interview-nio'
 }

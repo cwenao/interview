@@ -13,7 +13,14 @@ public class Message {
     private String fromUser;
     private String toUser;
     private String msgData;
+    private String msgType;
 
+    public String getMsgType() {
+        return msgType;
+    }
+    public void setMsgType(String msgType) {
+        this.msgType = msgType;
+    }
     public String getMsgId() {
         return msgId;
     }
