@@ -5,6 +5,7 @@
 package com.cwenao.java.nio.base.message.server;
 
 import java.io.IOException;
+import java.net.InetSocketAddress;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
@@ -19,6 +20,10 @@ import java.util.Map;
  */
 public abstract class ServerSocketHandler {
 
+    private static final int SERVER_PORT = 9595;
+
+    private ServerSocketChannel serverSocketChannel;
+
     private Selector conn_selector;
 
     private Selector read_selector;
@@ -28,6 +33,22 @@ public abstract class ServerSocketHandler {
     public  Map<String, ClientInfo> clientInfoMap = new HashMap<>();
 
     public Object lock = new Object();
+
+    public void init() {
+        try {
+            serverSocketChannel = ServerSocketChannel.open();
+            serverSocketChannel.socket().bind(new InetSocketAddress(SERVER_PORT));
+            serverSocketChannel.configureBlocking(false);
+
+            conn_selector = Selector.open();
+            read_selector = Selector.open();
+
+            serverSocketChannel.register(conn_selector, SelectionKey.OP_ACCEPT);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     public void connectHandler() {
         while (!isStop) {
@@ -113,5 +134,13 @@ public abstract class ServerSocketHandler {
 
     public void setRead_selector(Selector read_selector) {
         this.read_selector = read_selector;
+    }
+
+    public Selector getConn_selector() {
+        return conn_selector;
+    }
+
+    public void setConn_selector(Selector conn_selector) {
+        this.conn_selector = conn_selector;
     }
 }

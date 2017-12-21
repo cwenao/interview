@@ -5,6 +5,8 @@
 package com.cwenao.java.nio.base.message.server;
 
 import java.io.IOException;
+import java.nio.channels.SelectionKey;
+import java.nio.channels.Selector;
 import java.nio.channels.SocketChannel;
 
 /**
@@ -18,19 +20,22 @@ public class ClientInfo {
 
     private SocketChannel channel;
 
-    public ClientInfo(String fromUser, String data) {
+    public ClientInfo(String fromUser, String data, SocketChannel dataChannel) {
         this.fromUser = fromUser;
-        initClient();
+        //initClient(selector);
+        this.channel = dataChannel;
     }
 
-    private void initClient() {
-        try {
-            channel = SocketChannel.open();
-            channel.configureBlocking(false);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+//    private void initClient(Selector selector) {
+//        try {
+//            channel = SocketChannel.open();
+//            channel.configureBlocking(false);
+//            channel.register(selector, SelectionKey.OP_READ);
+//
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
     public String getFromUser() {
         return fromUser;

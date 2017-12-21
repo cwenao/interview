@@ -6,7 +6,6 @@ package com.cwenao.java.nio.base.message.server;
 
 import com.alibaba.fastjson.JSONObject;
 import com.cwenao.java.nio.base.message.pojo.Message;
-import com.sun.deploy.util.StringUtils;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -38,13 +37,13 @@ public class DataHandler extends ServerSocketHandler{
         }
 
         if ("0".equalsIgnoreCase(message.getMsgType())) {
-            System.out.printf("this is the register: " + message.getFromUser() + " and the data: " + message.getMsgData());
+            System.out.println("this is the register: " + message.getFromUser() + " and the data: " + message.getMsgData());
 
-            ClientInfo clientInfo = new ClientInfo(message.getFromUser(), message.getMsgData());
+            ClientInfo clientInfo = new ClientInfo(message.getFromUser(), message.getMsgData(), dataChannel);
             this.clientInfoMap.put(message.getFromUser(), clientInfo);
 
         } else {
-            System.out.printf("receive the message: "+message.getMsgData()+" from "+message.getFromUser());
+            System.out.println("receive the message: "+message.getMsgData()+" from "+message.getFromUser());
             byteBuffer.rewind();
 
             if (message.getToUser() != null && !"".equalsIgnoreCase(message.getToUser())) {
