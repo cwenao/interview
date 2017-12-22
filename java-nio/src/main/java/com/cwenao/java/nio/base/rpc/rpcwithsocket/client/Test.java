@@ -2,13 +2,13 @@
  * Company
  * Copyright (C) 2014-2017 All Rights Reserved.
  */
-package com.cwenao.java.nio.base.rpcwithsocket.client;
+package com.cwenao.java.nio.base.rpc.rpcwithsocket.client;
 
-import com.cwenao.java.nio.base.rpcwithsocket.client.proxy.RPCClient;
-import com.cwenao.java.nio.base.rpcwithsocket.server.HelloService;
-import com.cwenao.java.nio.base.rpcwithsocket.server.Server;
-import com.cwenao.java.nio.base.rpcwithsocket.server.impl.HelloServiceImpl;
-import com.cwenao.java.nio.base.rpcwithsocket.server.impl.ServerImpl;
+import com.cwenao.java.nio.base.rpc.rpcwithsocket.client.proxy.RPCClient;
+import com.cwenao.java.nio.base.rpc.rpcwithsocket.server.HelloService;
+import com.cwenao.java.nio.base.rpc.rpcwithsocket.server.Server;
+import com.cwenao.java.nio.base.rpc.rpcwithsocket.server.impl.HelloServiceImpl;
+import com.cwenao.java.nio.base.rpc.rpcwithsocket.server.impl.ServerImpl;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;

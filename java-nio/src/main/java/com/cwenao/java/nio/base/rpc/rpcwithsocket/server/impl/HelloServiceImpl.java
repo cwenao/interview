@@ -2,9 +2,9 @@
  * Company
  * Copyright (C) 2014-2017 All Rights Reserved.
  */
-package com.cwenao.java.nio.base.rpcwithsocket.server.impl;
+package com.cwenao.java.nio.base.rpc.rpcwithsocket.server.impl;
 
-import com.cwenao.java.nio.base.rpcwithsocket.server.HelloService;
+import com.cwenao.java.nio.base.rpc.rpcwithsocket.server.HelloService;
 
 /**
  * @author cwenao

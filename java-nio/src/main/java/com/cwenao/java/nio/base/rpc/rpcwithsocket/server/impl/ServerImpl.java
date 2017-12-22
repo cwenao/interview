@@ -2,10 +2,10 @@
  * Company
  * Copyright (C) 2014-2017 All Rights Reserved.
  */
-package com.cwenao.java.nio.base.rpcwithsocket.server.impl;
+package com.cwenao.java.nio.base.rpc.rpcwithsocket.server.impl;
 
-import com.cwenao.java.nio.base.rpcwithsocket.server.Server;
-import com.cwenao.java.nio.base.rpcwithsocket.server.ServerTask;
+import com.cwenao.java.nio.base.rpc.rpcwithsocket.server.Server;
+import com.cwenao.java.nio.base.rpc.rpcwithsocket.server.ServerTask;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;

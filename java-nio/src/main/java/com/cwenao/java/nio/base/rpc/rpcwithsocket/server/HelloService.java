@@ -2,7 +2,7 @@
  * Company
  * Copyright (C) 2014-2017 All Rights Reserved.
  */
-package com.cwenao.java.nio.base.rpcwithsocket.server;
+package com.cwenao.java.nio.base.rpc.rpcwithsocket.server;
 
 /**
  * @author cwenao
