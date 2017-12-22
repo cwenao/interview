@@ -2,7 +2,7 @@
  * Company
  * Copyright (C) 2014-2017 All Rights Reserved.
  */
-package com.cwenao.java.nio.base;
+package com.cwenao.java.nio.base.test;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
