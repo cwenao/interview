@@ -26,17 +26,6 @@ public class ClientInfo {
         this.channel = dataChannel;
     }
 
-//    private void initClient(Selector selector) {
-//        try {
-//            channel = SocketChannel.open();
-//            channel.configureBlocking(false);
-//            channel.register(selector, SelectionKey.OP_READ);
-//
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
-
     public String getFromUser() {
         return fromUser;
     }
