@@ -6,4 +6,5 @@ include 'multi-thread'
 include 'jvm-core'
 include 'daas'
 include 'java-nio'
+include 'h5'
 
