@@ -14,7 +14,7 @@ import com.cwenao.java.core.proxy.cglib.service.PersistenceService;
 public class PersistenceServiceImpl implements PersistenceService{
     @Override
     public void save(int id, UserInfo data) {
-        System.out.println(" this is the userInfo: nickName is "+data.getNickName()+" and id is "+data.getId());
+        System.out.println("this is the userInfo: nickName is "+data.getNickName()+" and id is "+data.getId());
     }
 
     @Override
