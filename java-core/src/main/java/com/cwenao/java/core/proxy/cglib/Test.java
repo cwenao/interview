@@ -52,6 +52,5 @@ public class Test {
         PersistenceService persistenceService = test.testCreateCGLib();
         persistenceService.save(1, userInfo);
 
-        persistenceService.save(1, userInfo);
     }
 }
