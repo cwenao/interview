@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lean1</title>
+</head>
+<body>
+<p>This is the JavaScript </p>
+<script>
+    document.write("<h1> this is the title </h1>");
+    document.write("<h2> this is the content</h2>")
+</script>
+
+<p>to test click the button</p>
+
+<button type="button" onclick="alert('welcome!!!')">Click</button>
+
+<p>this the replace the html content</p>
+<p id="changeContent">before to change</p>
+<button type="button" onclick="changeContent()">ToChangeText</button>
+
+<p>This is to change the image</p>
+<img id="lightBulb" src="http://www.runoob.com/images/pic_bulboff.gif" onclick="turnOffOrOn()" width="100" height="180"/>
+
+<p>This is to change the html style</p>
+
+<p id="changeColor">this is the to change to color</p>
+<button type="button" onclick="changeColor()">click</button>
+
+<p>This is to valid the number</p>
+To entry the number: <input type="text" id="inNumber"/>
+<button type="button" onclick="validNumber()">To valid Number</button>
+</body>
+
+<script type="text/javascript">
+
+    function changeContent() {
+        var x = document.getElementById("changeContent");
+        x.innerText = "this is changed after!!";
+    }
+
+    function turnOffOrOn() {
+
+        element = document.getElementById('lightBulb');
+
+        if (element.src.match('bulboff')){
+            element.src = "http://www.runoob.com/images/pic_bulbon.gif";
+        }else{
+            element.src = "http://www.runoob.com/images/pic_bulboff.gif";
+        }
+    }
+    function changeColor() {
+        x = document.getElementById("changeColor");
+        x.style.color = "#FF0000";
+    }
+
+    function validNumber() {
+        var x = document.getElementById("inNumber").value;
+        if (x == "" || isNaN(x)){
+            alert("Please to input the number!!")
+        }
+    }
+
+</script>
+</html>
