@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>learn2</title>
+</head>
+<body>
+    <button type="button" onclick="arrayTest()">Test Array</button>
+    <button type="button" onclick="objectTest()">Test Object</button>
+
+</body>
+
+<script type="text/javascript">
+    function arrayTest() {
+        var array = new Array();
+        array[0] = "cwenao";
+        array[1] = 1000;
+        array[2] = "nini";
+
+        for (var x in array) {
+            alert(array[x]);
+        }
+    }
+    
+    function objectTest() {
+        var person = {
+            firstName: "cwenao",
+            lastName: "nini",
+            age: 1000,
+            doLove: function () {
+                alert("I love nini");
+            }
+        };
+
+        alert("this is the person named: "+ person.firstName+" "+person.lastName+" and age is : "+person.age);
+        person.doLove();
+
+    }
+
+</script>
+</html>
