@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>learn3</title>
+</head>
+<body>
+    <p id="dateChange">现在时间：</p>
+    <button type="button" onclick="getElementById('dateChange').innerHTML=Date()" value="现在时间">现在时间</button>
+    <button type="button" onclick="testTypeOf()" value="现在时间">Test the Typeof</button>
+
+</body>
+<script type="text/javascript">
+    function testTypeOf() {
+        var test1 = "dfsdfsdf";
+        var test2 = 123;
+        var test3 = "456";
+        var test4 = {name: "cwenao", age: 1000};
+        alert(typeof test1 );
+        alert(typeof test2);
+        alert(typeof test3);
+        alert(typeof test4);
+    }
+</script>
+</html>
