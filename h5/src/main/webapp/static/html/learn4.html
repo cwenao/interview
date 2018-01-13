@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>learn4</title>
+</head>
+<body>
+    <button type="button" onclick="testAttribute()">TestAttribute</button>
+
+    <p id="testRegular">This is the cwenao's learn.</p>
+    <button type="button" onclick="regular()">regular...</button>
+</body>
+
+<script>
+
+    function testAttribute() {
+        alert("cwenao".constructor);
+    }
+    //alert(testAttribute.constructor);
+
+    function regular() {
+        var str = "Visit Runoob!";
+        var n = str.search(/Run/i);
+        alert(n);
+
+        var x = document.getElementById('testRegular').innerText;
+        alert(x.replace(/cwenao/i, 'nini'));
+
+        alert(/visit/i.test(str));
+
+    }
+
+</script>
+</html>
