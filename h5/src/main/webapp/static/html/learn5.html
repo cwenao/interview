@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>learn5</title>
+</head>
+<body>
+<form name="testForm" action="lean1.html" onsubmit="return vaildForm();" method="post">
+name: <input type="text" name="fname"/>
+    <input value="submit" type="submit"/>
+</form>
+
+<p>Please fill the number</p>
+<input type="number" id="test1" min="100" max="300" required/>
+<p id="message"></p>
+<button type="button" onclick="validNum()">验证</button>
+
+
+</body>
+<script type="text/javascript">
+
+    function vaildForm() {
+        var name = document.forms['testForm']['fname'].value;
+        if (name == null || name == "")
+        {
+            alert("Please input the user name");
+            return false;
+        }
+        alert("The user name is: " + name);
+    }
+
+    function validNum() {
+
+        var test1 = document.getElementById('test1');
+        if (test1.checkValidity() == false) {
+            document.getElementById('message').innerHTML = test1.validationMessage;
+        }else {
+            document.getElementById('message').innerHTML = "输入正确";
+        }
+
+    }
+
+</script>
+</html>
