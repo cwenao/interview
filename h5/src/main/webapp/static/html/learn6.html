@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>learn6</title>
+</head>
+<body>
+<p id="name">Please fill your name</p>
+<p id="age">This is your age</p>
+<p id="hobby">This is your hobby</p>
+
+<button type="button" onclick="testJSON()">Fill Content</button>
+</body>
+
+
+<script type="text/javascript">
+
+    function testJSON() {
+        var personJSON = '{ "name":"cwenao", "age":12, "hobby":[{"name": "basketball"},{"name":"football"}]}';
+        obj = JSON.parse(personJSON);
+
+        document.getElementById("name").innerText = obj.name;
+        document.getElementById("age").innerText = obj.age;
+
+        var hobby = obj.hobby;
+        var html = '';
+        for (var x in hobby) {
+            html+='<p>'+hobby[x].name+'</p>'
+        }
+        document.getElementById('hobby').innerHTML = html;
+
+    }
+
+</script>
+
+</html>
