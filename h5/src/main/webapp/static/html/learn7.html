@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>learn7</title>
+</head>
+<body>
+
+</body>
+
+<script type="text/javascript">
+
+    var x = function (a, b) {
+        return a * b;
+    };
+
+    //alert(x(3,4))
+    testArguments(1, "cwenao", 3.2, "nini");
+    function testArguments() {
+        alert(arguments.length);
+        for (var x in arguments) {
+            alert(arguments[x]);
+        }
+    }
+
+    var myObj;
+    function testCall(a,b) {
+        return a * b;
+    }
+
+    var ar = [10, 5];
+    myObj = testCall.apply(myObj, ar);
+    alert(myObj);
+
+</script>
+
+</html>
