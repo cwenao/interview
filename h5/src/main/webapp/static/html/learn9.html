@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>learn9</title>
+</head>
+<body>
+<p>Hello world!</p>
+<div id="main">
+    <p>DOM Test</p>
+    <p>Now it's good to show us</p>
+</div>
+
+<div>
+    <h1 onclick="this.innerHTML='Ooops!!!'">Please Click Me</h1>
+</div>
+<div>
+    <button id="testAssign" type="button">TestAssign</button>
+</div>
+
+<div onmouseover="mOver(this)" onmouseout="mOut(this)">Please .....</div>
+
+</body>
+
+<script type="text/javascript">
+    var domTest = document.getElementById("main");
+    var y = domTest.getElementsByTagName('p');
+    for (var x in y) {
+       // alert(y[x].innerHTML);
+    }
+
+    document.getElementById('testAssign').onclick = testAssign;
+    function testAssign() {
+        alert("this is to test the assign for button!!!")
+    }
+
+    function mOver(obj) {
+        obj.innerHTML="Thank you!!";
+    }
+
+    function mOut(obj) {
+        obj.innerHTML = "Mouse Over Me";
+
+    }
+
+</script>
+
+</html>
