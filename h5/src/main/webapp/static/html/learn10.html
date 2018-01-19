@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>learn10</title>
+</head>
+<body>
+<div>
+    <button id="testEventListener" type="button" >Click me</button>
+    <button id="testEventListenerWith" type="button" >Click me With Arguments</button>
+
+</div>
+
+<div id="removeE">
+    <p id="p1">To Test remove elements</p>
+    <p id="p2">This is the second p</p>
+    <p onclick="testRemove()">To remove</p>
+</div>
+<div id="addE">
+    <p id="addp1">To Test add elements</p>
+    <p onclick="testAdd()">To ADD</p>
+</div>
+</body>
+
+<script type="text/javascript">
+    document.getElementById('testEventListener').addEventListener("click",test);
+
+    function test() {
+        alert("This is to test the eventListener!!!! ")
+
+    }
+
+    var a = 10, b = 50;
+    document.getElementById('testEventListenerWith').addEventListener("click",function () { testWithArguments(a,b); });
+    function testWithArguments(a, b) {
+        alert(a * b);
+    }
+
+    function testRemove() {
+        var parent = document.getElementById("removeE");
+        var child = document.getElementById("p1");
+        parent.removeChild(child);
+    }
+    
+    function testAdd() {
+
+        var parent = document.getElementById('addE');
+
+        var p = document.createElement('p');
+        var node = document.createTextNode('this context was add with create method');
+        p.appendChild(node);
+
+        parent.appendChild(p);
+        
+    }
+
+</script>
+</html>
