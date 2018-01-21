@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>learn12</title>
+</head>
+<body>
+<p>显示点击的按钮</p>
+<p id="testConfirm"></p>
+<button type="button" onclick="testConfirm()">TestConfirm</button>
+
+<p>显示prompt</p>
+<p id="testPrompt"></p>
+<button type="button" onclick="tstPrompt()">TestConfirm</button>
+</body>
+
+<script type="text/javascript">
+    function testConfirm() {
+        var r = confirm("请确认信息");
+
+        if (r == true) {
+            x = "确定";
+        }else if (r==false){
+            x = "取消";
+        }
+        document.getElementById("testConfirm").innerHTML = x;
+    }
+    
+    function tstPrompt() {
+        var person = prompt("Please input your name","fullname");
+
+        document.getElementById('testPrompt').innerHTML = "你好：" + person;
+    }
+    
+</script>
+
+</html>
