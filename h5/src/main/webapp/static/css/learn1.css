@@ -1,0 +1,16 @@
+p {
+    color:red;
+    font-size: 18px;
+    text-align: center;
+}
+#testP{
+    color: blue;
+    text-align: center;
+    font-size: 29px;
+}
+.left{
+    text-align: left;
+}
+.center{
+    text-align: center;
+}
