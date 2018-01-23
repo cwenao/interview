@@ -1,0 +1,48 @@
+#body {
+    background: blue;
+    background-image: url("../images/WX20171216-201119.png");
+    background-position: 0 0;
+    font-size: 100%;
+}
+h1{
+    text-align: center;
+    color: brown;
+    font-size: 4em;
+}
+a {
+
+    text-decoration: none;
+}
+p{
+    font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-size: 90px;
+    text-indent: 180px;
+}
+p.uppercase {
+    text-transform: uppercase;
+}
+a:link {
+    color: blue;
+}
+a:visited{
+    color: coral;
+}
+a:hover{
+    color: blueviolet;
+    background-image: url("../images/WX20171216-201119.png");
+}
+a:active{
+    color: coral;
+    font-size: 120px;
+}
+
+ul.a{list-style-type: circle}
+ul.b{list-style-type: square}
+
+table{
+    border-collapse: collapse;
+}
+table,th,td{
+    border: 1px solid blue;
+}
