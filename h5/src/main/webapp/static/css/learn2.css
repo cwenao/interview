@@ -17,7 +17,8 @@ p{
     font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-size: 90px;
-    text-indent: 180px;
+    position: relative;
+    text-indent: 10px;
 }
 p.uppercase {
     text-transform: uppercase;
@@ -48,6 +49,8 @@ table,th,td{
 }
 
 div {
+    position: relative;
+    left: 180px;
     padding: 10px;
     width: 300px;
     border: 1px solid green;

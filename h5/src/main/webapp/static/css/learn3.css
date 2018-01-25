@@ -1,0 +1,17 @@
+p {
+    color: green;
+    text-align: center;
+}
+.marked {
+    background-color: coral;
+}
+
+.marked p{
+    color: blue;
+}
+
+img {
+    float: right;
+    position: absolute;
+    clip: rect(0px,200px,200px,0px);
+}
