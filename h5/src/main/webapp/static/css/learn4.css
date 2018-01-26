@@ -1,0 +1,31 @@
+a.testRed:link {
+    color: blueviolet;
+}
+
+a.testRed:visited {
+    color: coral;
+}
+p:first-child {
+    color: blue;
+}
+p > i:first-child {
+    color: brown;
+}
+
+p:first-child i{
+    color: coral;
+}
+input:checked+p{
+    font-size: 22px;
+    color: coral;
+}
+p:first-letter{
+    color: coral;
+    font-size: xx-large;
+}
+h1:before {
+    content: "hello ";
+}
+h1:after{
+    content: " good idea for us !!!";
+}
