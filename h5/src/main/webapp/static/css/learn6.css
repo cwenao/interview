@@ -1,0 +1,38 @@
+
+.navigation{
+
+}
+
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 8px;
+    background-color: black;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+}
+
+.navigation ul li {
+    float: left;
+    border-right: 1px solid coral;
+}
+.navigation ul li:last-child {
+    border-right: none;
+}
+.navigation ul li a {
+    display: block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color: white;
+}
+
+li a.active {
+    background-color: red;
+    color: white;
+}
+
+li a:hover:not(.active){
+    background-color: red;
+    color: white;
+}
