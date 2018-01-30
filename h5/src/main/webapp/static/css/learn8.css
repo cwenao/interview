@@ -1,0 +1,41 @@
+.tooltip{
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext{
+    color: #F9F9F9;
+    visibility: hidden;
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    position: absolute;
+    z-index: 1;
+
+/*以下实例中，提示工具显示在指定元素的右侧(left:105%) 。*/
+/*注意 top:-5px 同于定位在容器元素的中间。使用数字 5 因为提示文本的顶部和底部的内边距（padding）是 5px。*/
+/*如果你修改 padding 的值，top 值也要对应修改，这样才可以确保它是居中对齐的。*/
+    top: -5px;
+    left: 110%;
+
+
+}
+
+.tooltip:hover .tooltiptext{
+    visibility: visible;
+}
+
+.tooltip .tooltiptext::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+}
