@@ -1,0 +1,12 @@
+input[type='text'] {
+    width: 150px;
+    background-color: coral;
+    color: #F9F9F9;
+    margin-bottom: 10px;
+}
+
+input[type='button'] {
+    width: 80px;
+    margin-left: 20px;
+    display: block;
+}
