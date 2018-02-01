@@ -1,0 +1,14 @@
+div {
+    border: 12px solid transparent;
+    border-radius: 25px 40px 35px;
+    width: 180px;
+    box-shadow: 10px 10px 5px #cccccc;
+}
+div p {
+    padding: 18px 22px;
+    position: relative;
+}
+
+#round {
+    border-image: url("../images/border.png") 30 30 round;
+}
