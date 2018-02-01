@@ -1,14 +1,65 @@
-div {
+.divTest{
     border: 12px solid transparent;
     border-radius: 25px 40px 35px;
     width: 180px;
     box-shadow: 10px 10px 5px #cccccc;
 }
-div p {
+.divTest p {
     padding: 18px 22px;
     position: relative;
 }
 
-#round {
+.round {
     border-image: url("../images/border.png") 30 30 round;
 }
+
+
+
+.example1 {
+    background-image: url("../images/img_flwr.gif"), url("../images/paper.gif");
+    background-position: right bottom,left top;
+    background-repeat: no-repeat, repeat;
+    background-size: 180px 120px, 10px 10px;
+    padding: 30px;
+}
+
+.grad1{
+    height: 200px;
+    background: linear-gradient(to bottom right, red,green, blue);
+}
+
+.grad2 {
+    height: 400px;
+    width: 400px;
+    background: radial-gradient(circle, red,yellow, green);
+}
+
+/*h1 {*/
+    /*text-shadow: 5px 5px 5px #FF0000;*/
+/*}*/
+
+div.card {
+    width: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2) , 0 6px 20px 0 rgba(0,0,0,0.19);
+    text-align: center;
+}
+
+div.header {
+    background: #4CAF50;
+    color: #F9F9F9;
+    padding: 10px;
+    font-size: 40px;
+}
+
+div.container {
+    padding: 10px;
+}
+
+div.test {
+    white-space: nowrap;
+    width: 12em;
+    overflow: hidden;
+    border: 1px #4CAF50;
+    text-overflow: ellipsis;
+}
+
