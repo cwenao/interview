@@ -1,0 +1,107 @@
+div.test {
+    width: 200px;
+    height: 100px;
+    transform: rotate(30deg) translate(10px, 10px) scale(1) skew(20deg,10deg);
+    background-color: #4CAF50;
+}
+
+div.test2 {
+    width: 200px;
+    height: 100px;
+    background-color: yellowgreen;
+    transform: matrix(0.866,0.5,-0.5,0.866,0,0);
+}
+
+div.test3 {
+    width: 100px;
+    height: 100px;
+    background-color: #4CAF50;
+    transition: width 2s;
+}
+
+div.test3:hover{
+    width: 300px;
+}
+
+div.test4 {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    transition: width 2s, height 2s, transform 2s;
+}
+
+div.test4:hover{
+    width: 400px;
+    height: 400px;
+    transform: rotate(180deg);
+}
+
+div.test5 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    -webkit-animation: myfirst 5s;
+    -o-animation: myfirst 5s;
+    animation: myfirst 5s;
+}
+
+@keyframes myfirst {
+    from {
+        background-color: red;
+    }
+    to {
+        background-color: yellow;
+    }
+}
+
+div.test5 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+
+    -webkit-animation: mysecond 5s;
+    -o-animation: mysecond 5s;
+    animation: mysecond 5s;
+
+}
+
+@keyframes mysecond {
+    0% {
+        background: red;
+        left: 0px;
+        top: 500px;
+    }
+    25% {
+        background: yellow;
+        left: 400px;
+        top: 500px;
+    }
+    50% {
+        background: blue;
+        left: 400px;
+        top: 1000px;
+    }
+    75% {
+        background: green;
+        left: 0px;
+        top: 1000px;
+    }
+    100% {
+        background: red;
+        left: 0px;
+        top: 500px;
+    }
+}
+
+.button {
+    border: none;
+    color: #F9F9F9;
+    display: inline-block;
+    background-color: #4CAF50;
+    text-align: center;
+    text-decoration: none;
+    margin: 4px 2px;
+    font-size: 16px;
+    cursor: pointer;
+}
