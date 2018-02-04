@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+    <input list="browsers" name="browser">
+    <datalist id="browsers">
+        <option value="IE"></option>
+        <option value="Firefox"></option>
+        <option value="Chrome"/>
+    </datalist>
+
+    0<input type="range" id="a" value="50" />100
+    +<input type="number" id="b" value="50"/>
+    =<output name="x" for="a b" ></output>
+
+</form>
+</body>
+</html>
