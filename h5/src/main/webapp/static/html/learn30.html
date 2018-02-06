@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>db</title>
+</head>
+<body>
+    <div id="status">This is the status</div>
+</body>
+<script type="text/javascript">
+    var db = openDatabase('mydb','0.5','test db', 2*1024*1024);
+    var msg;
+    db.transaction(function (transaction) {
+        transaction.executeSql('CREATE TABLE IF NOT EXISTS logs(id UNIQUE , log)');
+        transaction.executeSql('INSERT INTO logs(id,log) VALUES (1,"cwenao is here ")');
+        transaction.executeSql('INSERT INTO logs(id,log) VALUES (2,"nini is here")');
+        msg = '<p>数据表已创建，且插入了两条数据。</p>';
+        document.querySelector('#status').innerHTML = msg;
+    });
+    db.transaction(function (transaction) {
+        transaction.executeSql('SELECT * FROM logs', [] ,function(transaction, results){
+            var len = results.rows.length;
+            msg = "<p>查询记录条数: " + len + "</p>";
+            document.querySelector('#status').innerHTML += msg;
+            for (var i = 0; i < len; i++){
+                msg = "<p><b>" + results.rows.item(i).log + "</b></p>";
+                document.querySelector('#status').innerHTML +=  msg;
+            }
+        });
+    })
+</script>
+</html>
