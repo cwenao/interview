@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>learnjquery2</title>
+    <script src="../js/jquery-3.3.1.js"></script>
+</head>
+<body>
+
+<p id="test">this is to test hover</p>
+name : <input type="text" id="userName"/>
+passwd:<input type="text" id="userPasswd"/>
+
+<p id="hideOrShow">using the toggle to switch hide or show</p>
+<button id="testToggle">hide/show</button>
+</body>
+
+<script type="text/javascript">
+    $(function () {
+        // $("#test").hover(
+        //     function () {
+        //         alert('you are enter the p')
+        //     },
+        //     function () {
+        //         alert('but now you are leave it')
+        //     }
+        // );
+        $("input").focus(function () {
+            $(this).css("background-color","#cccccc");
+            }
+        );
+        $("input").blur(function () {
+            $(this).css("background-color","#ffffff");
+            }
+        );
+        $("#testToggle").click(function () {
+            $("#hideOrShow").toggle();
+        });
+    })
+</script>
+</html>
