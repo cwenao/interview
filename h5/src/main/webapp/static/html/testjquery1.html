@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery1</title>
+    <script src="../js/jquery-3.3.1.js" ></script>
+</head>
+<body>
+    <h1>This is the jquery first</h1>
+    <h1>do hide the button</h1>
+    <p>Hide this text ........</p>
+    <p id="test">Hide this text with id selector</p>
+    <p class="test">Hide this text with class</p>
+    <button>Click</button>
+</body>
+<script type="text/javascript">
+    $(function () {
+        $("button").click(function () {
+            //$("p").hide();
+            //$("#test").hide();
+            $(".test").hide();
+        });
+    });
+</script>
+</html>
