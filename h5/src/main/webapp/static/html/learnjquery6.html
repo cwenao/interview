@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<p id="test">cwenao test the chaining</p>
+<input id="buttonTest" type="button" value="Click" />
+</body>
+<script type="text/javascript">
+    $(function(){
+        $("#buttonTest").click(function(){
+            $("#test").css("color","red").slideUp(2000).slideDown(2000);
+        });
+    })
+</script>
+</html>
